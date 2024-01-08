@@ -6,13 +6,17 @@ import React from 'react';
         https://rickandmortyapi.com/api/character
         Створити 6 персонажів*/}
 const RickAndMortyComponent = () => {
+    let obj;
+
+    fetch('https://rickandmortyapi.com/api/character/')
+        .then(value => value.json())
+        .then(value => console.log(value));
+
+
+
     return (
         <div>
-            {
-                fetch('https://rickandmortyapi.com/api/character/1')
-                    .then(value => value.json())
-                    .then(value => console.log(value))
-            }
+
 
         </div>
     );
