@@ -1,15 +1,12 @@
 import React from 'react';
 
-const SimpsonsComponent = ({SimpsonsArr}) => {
+const SimpsonsComponent = ({hero}) => {
 
     return (
-            SimpsonsArr.map(hero =>
             <div>
                 <h3>{hero.name}</h3>
-                <img src={hero.img} alt={hero.name}/>
-
+                <img src={hero.image} alt={hero.name}/>
             </div>
-            )
     );
 };
 

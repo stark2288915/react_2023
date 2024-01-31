@@ -1,22 +1,20 @@
 import React from 'react';
 
-const RickAndMortyComponent = ({RickAndMortyArr}) => {
+const RickAndMortyComponent = ({hero}) => {
 
     return (
-        RickAndMortyArr.map(hero =>
             <div>
                 <h3>{hero.name}</h3>
-                <img src={hero.pic} alt={hero.name}/>
+                <img src={hero.image} alt={hero.name}/>
                 <ul>
-                    <li>{hero.id}</li>
-                    <li>{hero.status}</li>
-                    <li>{hero.species}</li>
-                    <li>{hero.type}</li>
-
+                    <li>id: {hero.id}</li>
+                    <li>status: {hero.status}</li>
+                    <li>species: {hero.species}</li>
+                    <li>type: {hero.type}</li>
+                    <li>gender: {hero.gender}</li>
                 </ul>
             </div>
         )
-    );
 };
 
 export default RickAndMortyComponent;

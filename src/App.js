@@ -1,14 +1,13 @@
-
 import './App.css';
 import SimpsonsComponent from "./components/Simpsons/SimpsonsComponent";
 import RickAndMortyComponent from "./components/RickAndMorty/RickAndMortyComponent";
 
 const SimpsonsArr = [
-    {name: 'Bart Simpson', pic: 'https://upload.wikimedia.org/wikipedia/en/a/aa/Bart_Simpson_200px.png'},
-    {name: 'Homer Simpson', pic: 'https://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png'},
-    {name: 'Maggi Simpson', pic: 'https://upload.wikimedia.org/wikipedia/en/9/9d/Maggie_Simpson.png'},
-    {name: 'Lisa Simpson', pic: 'https://upload.wikimedia.org/wikipedia/en/e/ec/Lisa_Simpson.png'},
-    {name: 'Marge Simpson', pic: 'https://upload.wikimedia.org/wikipedia/uk/0/0b/Marge_Simpson.png'},
+    {id: 1, name: 'Bart Simpson', image: 'https://upload.wikimedia.org/wikipedia/en/a/aa/Bart_Simpson_200px.png'},
+    {id: 2, name: 'Homer Simpson', image: 'https://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png'},
+    {id: 3, name: 'Maggi Simpson', image: 'https://upload.wikimedia.org/wikipedia/en/9/9d/Maggie_Simpson.png'},
+    {id: 4, name: 'Lisa Simpson', image: 'https://upload.wikimedia.org/wikipedia/en/e/ec/Lisa_Simpson.png'},
+    {id: 5, name: 'Marge Simpson', image: 'https://upload.wikimedia.org/wikipedia/uk/0/0b/Marge_Simpson.png'},
 ]
 
 const RickAndMortyArr = [
@@ -26,39 +25,17 @@ function App() {
 
   return (
     <div className="App">
+        {/*1. Описати всю сім'ю сімпсонів (5 персонажів)*/}
+
+        {SimpsonsArr.map(hero => <SimpsonsComponent hero={hero} key={hero.id}/>)}
 
 
-        <>
-            {/*1. Описати всю сім'ю сімпсонів (5 персонажів)*/}
-
-            <SimpsonsComponent SimpsonsArr={SimpsonsArr}/>
-
-
-
-            {/*2. Створити компонент який описує персонажа (властивості id,name,status,species,gender,image) з цього апі
+        {/*2. Створити компонент який описує персонажа (властивості id,name,status,species,gender,image) з цього апі
             https://rickandmortyapi.com/
             https://rickandmortyapi.com/api/character
             Створити 6 персонажів*/}
 
-            <RickAndMortyComponent RickAndMortyArr={RickAndMortyArr}/>
-        </>
-
-        {/*<SimpsonsComponent name={'Bart Simpson'} pic={'https://upload.wikimedia.org/wikipedia/en/a/aa/Bart_Simpson_200px.png'}/>
-        <SimpsonsComponent name={'Homer Simpson'} pic={'https://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png'}/>
-        <SimpsonsComponent name={'Maggi Simpson'} pic={'https://upload.wikimedia.org/wikipedia/en/9/9d/Maggie_Simpson.png'}/>
-        <SimpsonsComponent name={'Lisa Simpson'} pic={'https://upload.wikimedia.org/wikipedia/en/e/ec/Lisa_Simpson.png'}/>
-        <SimpsonsComponent name={'Marge Simpson'} pic={'https://upload.wikimedia.org/wikipedia/uk/0/0b/Marge_Simpson.png'}/>*/}
-
-
-
-        {/*2. Створити компонент який описує персонажа (властивості id,name,status,species,gender,image) з цього апі
-        https://rickandmortyapi.com/
-        https://rickandmortyapi.com/api/character
-        Створити 6 персонажів*/}
-
-        {/*<RickAndMortyComponent/>*/}
-
-
+        {RickAndMortyArr.map(hero => <RickAndMortyComponent hero={hero} key={hero.id}/>)}
 
     </div>
   );
