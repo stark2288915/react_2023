@@ -1,14 +1,15 @@
 import React from 'react';
 
-{/*1. Описати всю сім'ю сімпсонів (5 персонажів)*/}
+const SimpsonsComponent = ({SimpsonsArr}) => {
 
-const SimpsonsComponent = (props) => {
-    let {name, pic} = props;
     return (
-        <div>
-            <h3>{name}</h3>
-            <img src={pic}/>
-        </div>
+            SimpsonsArr.map(hero =>
+            <div>
+                <h3>{hero.name}</h3>
+                <img src={hero.img} alt={hero.name}/>
+
+            </div>
+            )
     );
 };
 

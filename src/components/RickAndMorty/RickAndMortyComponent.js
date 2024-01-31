@@ -1,24 +1,21 @@
 import React from 'react';
 
-
-{/*2. Створити компонент який описує персонажа (властивості id,name,status,species,gender,image) з цього апі
-        https://rickandmortyapi.com/
-        https://rickandmortyapi.com/api/character
-        Створити 6 персонажів*/}
-const RickAndMortyComponent = () => {
-    let obj;
-
-    fetch('https://rickandmortyapi.com/api/character/')
-        .then(value => value.json())
-        .then(value => console.log(value));
-
-
+const RickAndMortyComponent = ({RickAndMortyArr}) => {
 
     return (
-        <div>
+        RickAndMortyArr.map(hero =>
+            <div>
+                <h3>{hero.name}</h3>
+                <img src={hero.pic} alt={hero.name}/>
+                <ul>
+                    <li>{hero.id}</li>
+                    <li>{hero.status}</li>
+                    <li>{hero.species}</li>
+                    <li>{hero.type}</li>
 
-
-        </div>
+                </ul>
+            </div>
+        )
     );
 };
 
