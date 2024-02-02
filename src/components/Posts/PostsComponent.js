@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import {PostComponent} from "./PostComponent";
-import {getPosts} from "../services/posts.api.service";
+import {getAxiosPosts, getFetchPosts} from "../services/posts.api.service";
 
 const PostsComponent = () => {
 
     let [posts, setUsers] = useState([]);
 
     useEffect(() => {
-            getPosts()
-                .then(value => setUsers(value));
+        getAxiosPosts()
+                .then(value => setUsers(value.data));
     },[]);
 
     return (
