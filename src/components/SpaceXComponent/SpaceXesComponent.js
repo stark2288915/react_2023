@@ -7,8 +7,10 @@ const SpaceXesComponent = () => {
 
     useEffect(() => {
         getSpaseXLaunches()
-            .then(value => setLaunches(value.data));
-    })
+            .then(value => value.data)
+            .then(value => value.filter(launch => launch.launch_year < 2020))
+            .then(value => setLaunches(value));
+    },[])
 
     return (
         <div>
