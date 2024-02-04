@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {LectionComponent} from "./components/LectionComponent/lectionComponent";
 function App() {
-  return (
-    <div className="App">
 
+    return (
+    <div className="App">
+        <LectionComponent/>
     </div>
   );
 }
