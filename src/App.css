@@ -17,11 +17,38 @@ li{
 
 /*style for Posts*/
 
+#mainPostsBlock{
+    display: flex;
+}
+
+
 
 .mainPostsDiv{
-    position: relative;
+    width: 50%;
 }
-.mainPostsDiv h1, h2{
+
+
+.postDiv{
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    background-color: #ced4dc;
+    border-radius: 2%;
+}
+
+.postDetailsDiv{
+    width: 40%;
+    height: 250px;
+    background-color: #7f8285;
+    position: sticky;
+    top: 10px;
+    left: 60%;
+    border-radius: 2%;
+    margin: 5px;
+    padding: 5px;
+}
+
+h1, h2{
     text-align: center;
 }
 
@@ -36,23 +63,8 @@ button{
 
 
 
-.postDiv{
-    width: 50%;
-    margin: 5px;
-    padding: 5px;
-    background-color: #ced4dc;
-    border-radius: 2%;
-}
-.postDetailsDiv{
-    width: 40%;
-    background-color: #7f8285;
-    position: sticky;
-    top:5px;
-    left: 60%;
-    border-radius: 2%;
-    margin: 5px;
-    padding: 5px;
-}
+
+
 
 
 

@@ -20,11 +20,20 @@ const PostsComponent = () => {
     }
 
     return (
-        <div className='mainPostsDiv'>
+
+        <div>
             <h1>Posts info</h1>
-            {postDetails && <PostDetailsComponent post={postDetails} chosePost={chosePost}/>}
-            {posts.map((post, index) => <PostComponent props={post} key={index} chosePost={chosePost}/>)}
+            <div id='mainPostsBlock'>
+                <div className='mainPostsDiv'>
+                    {posts.map((post, index) => <PostComponent props={post} key={index} chosePost={chosePost}/>)}
+                </div>
+                {postDetails && <PostDetailsComponent post={postDetails} chosePost={chosePost}/>}
+            </div>
         </div>
+
+
+
+
     );
 };
 
