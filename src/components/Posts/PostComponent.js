@@ -1,17 +1,13 @@
 import React from 'react';
 
-const PostComponent = ({props}) => {
+const PostComponent = ({props, chosePost}) => {
     return (
-            <div>
-                <ul>
-                    <li>id: {props.id}</li>
-                    <li>title: {props.title}</li>
-                </ul>
+            <div className='postDiv'>
+                <li>{`${props.id}. ${props.title}`}</li>
                 <button onClick={() => {
-                    console.log(props);
-
+                    chosePost(props);
                 }
-                }>about post</button>
+                }>details</button>
             </div>
     );
 };

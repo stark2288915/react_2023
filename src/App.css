@@ -6,6 +6,56 @@
 body{
 
 }
+li{
+    list-style-type: none;
+    margin: 3px;
+}
+
+/*style for Posts*/
+
+
+.mainPostsDiv{
+    position: relative;
+}
+.mainPostsDiv h1, h2{
+    text-align: center;
+}
+
+button{
+    width: 80px;
+    height: 20px;
+}
+
+.postDetailsDiv button{
+    margin-left: 45%;
+}
+
+
+
+.postDiv{
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+    background-color: #ced4dc;
+    border-radius: 2%;
+}
+.postDetailsDiv{
+    width: 40%;
+    background-color: #7f8285;
+    position: sticky;
+    top:5px;
+    left: 60%;
+    border-radius: 2%;
+    margin: 5px;
+    padding: 5px;
+
+    z-index: 1000;
+}
+
+
+
+
+
 
 /*style for SpaceXComponent*/
 
