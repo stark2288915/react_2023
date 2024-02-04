@@ -1,13 +1,11 @@
 import React from 'react';
 
 const SpaceXComponent = ({props}) => {
-    console.log(props);
-
     return (
-        <div>
-            <h1>mission_name: {props.mission_name}</h1>
-            <h3>launch_year: {props.launch_year}</h3>
-            <h3>mission_patch_small: {props.links.mission_patch_small}</h3>
+        <div className='launchDiv'>
+            <h3>mission name: {props.mission_name}</h3>
+            <h5>launch year: {props.launch_year}</h5>
+            <img src={props.links.mission_patch_small} alt={props.mission_name}/>
         </div>
     );
 };

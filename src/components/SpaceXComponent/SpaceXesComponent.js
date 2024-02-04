@@ -13,7 +13,7 @@ const SpaceXesComponent = () => {
     },[])
 
     return (
-        <div>
+        <div className='mainLaunchesDiv'>
             {launches.map((launch, index) => <SpaceXComponent props={launch} key={index}/>)}
         </div>
     );

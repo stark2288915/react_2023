@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+}
+
+/*style for SpaceXComponent*/
+
+
+.mainLaunchesDiv{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.launchDiv{
+    margin: 5px;
+    padding: 5px;
+    background-color: #ced4dc;
+    border: solid #585a5d;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.launchDiv img{
+    width: 200px;
+}
