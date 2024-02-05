@@ -13,4 +13,6 @@ const getComments = () => {
     return axiosJsPlasHolder.get('/comment/');
 }
 
+
+
 export {getUsers, getComments};

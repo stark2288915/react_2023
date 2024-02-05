@@ -1,7 +1,7 @@
 import './App.css';
 import {LectionComponent} from "./components/LectionComponent/lectionComponent";
 import {UserPostFormComponent} from "./components/UsersComponent/UserPostFormComponent";
-import MainUsersComponent from "./components/UsersComponent/MainUsersComponent";
+import {MainUsersComponent} from "./components/UsersComponent/MainUsersComponent";
 function App() {
 
     return (
