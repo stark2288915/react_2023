@@ -1,5 +1,5 @@
 import './App.css';
-import {PostsComponent} from "./components/Posts/PostsComponent";
+import {PostsComponent} from "./components/PostsComponent/PostsComponent";
 import {SpaceXesComponent} from "./components/SpaceXComponent/SpaceXesComponent";
 
 function App() {
