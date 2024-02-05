@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const getFetchPosts = () => fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(value => value.json());
+/*const getFetchPosts = () => fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(value => value.json());*/
 
 
 const axiosPosts = axios.create({
@@ -17,5 +17,5 @@ const getPostById = (id) => {
     return axiosPosts.get(`/posts/${id}`);
 }
 
-export {getFetchPosts, axiosPosts, getAxiosPosts, getPostById};
+export {axiosPosts, getAxiosPosts, getPostById};
 

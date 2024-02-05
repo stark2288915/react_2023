@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {PostComponent} from "./PostComponent";
-import {getAxiosPosts, getFetchPosts} from "../services/posts.api.service";
+import {getAxiosPosts} from "../services/posts.api.service";
 import {PostDetailsComponent} from "./PostDetailsComponent";
 
 const PostsComponent = () => {
