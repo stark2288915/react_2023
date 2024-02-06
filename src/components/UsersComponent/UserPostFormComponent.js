@@ -4,13 +4,12 @@ import {postUsers} from "../../services/users.api.service";
 
 const UserPostFormComponent = ({addUser}) => {
 
-    let {register, handleSubmit} = useForm();
+    const {register, handleSubmit} = useForm();
 
 
     const formUser = (data) => {
         postUsers(data)
-            .then(response => response.data)
-            .then(user => addUser({user}));
+            .then(({response}) => addUser(data));
     }
 
 

@@ -4,18 +4,16 @@ import {UserComponent} from "./UserComponent";
 import {UserPostFormComponent} from "./UserPostFormComponent";
 
 const MainUsersComponent = () => {
-    let [users, setUsers] = useState([]);
-
-    let addUser = ({user}) => {
-        setUsers([...users, user.data]);
-    }
-
+    const [users, setUsers] = useState([]);
 
     useEffect(() => {
         getUsers()
             .then(value => setUsers(value.data));
     }, []);
 
+    const addUser = (newUser) => {
+        setUsers([...users, newUser]);
+    }
 
     return (
         <div>
