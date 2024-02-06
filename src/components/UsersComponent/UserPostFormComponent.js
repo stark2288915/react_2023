@@ -1,29 +1,22 @@
 import React from 'react';
 import {useForm} from "react-hook-form";
-import {getUsers} from "../services/users.api.service";
+import {postUsers} from "../../services/users.api.service";
 
-const UserPostFormComponent = () => {
+const UserPostFormComponent = ({addUser}) => {
 
     let {register, handleSubmit} = useForm();
-    const postUser = (data) => {
-        console.log(data);
-        fetch('https://jsonplaceholder.typicode.com/users', {
-            method: 'POST',
-            body: JSON.stringify({
-                id: data.id,
-                name: data.name,
-                username: data.username,
-                email: data.email
-            }),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-            },
-        }).then(response => response.json()).then(json => console.log(json));
+
+
+    const formUser = (data) => {
+        postUsers(data)
+            .then(response => response.data)
+            .then(user => addUser({user}));
     }
+
 
     return (
         <div>
-            <form onSubmit={handleSubmit(postUser)}>
+            <form onSubmit={handleSubmit(formUser)}>
                 <input type="text" placeholder={'id'} {...register('id')}/>
                 <input type="text" placeholder={'name'} {...register('name')}/>
                 <input type="text" placeholder={'username'} {...register('username')}/>
