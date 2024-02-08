@@ -10,12 +10,20 @@ const MainCommentComponent = () => {
     useEffect(()=> {
         getComments()
             .then(value => setComments(value.data))
-
     }, []);
 
 
+
     const addComment = (newComment) => {
-        setComments([...comments, newComment])
+
+        const objComm = {
+            id: newComment.id,
+            postId: newComment.data.postId,
+            name: newComment.data.name,
+            email: newComment.data.email,
+            body: newComment.data.body,
+        }
+        setComments([...comments, objComm])
     }
 
 
@@ -28,4 +36,4 @@ const MainCommentComponent = () => {
     );
 };
 
-export default MainCommentComponent;
+export {MainCommentComponent};

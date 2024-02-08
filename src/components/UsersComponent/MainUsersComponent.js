@@ -12,7 +12,15 @@ const MainUsersComponent = () => {
     }, []);
 
     const addUser = (newUser) => {
-        setUsers([...users, newUser]);
+
+        const objUser = {
+            id: newUser.id,
+            name: newUser.data.name,
+            username: newUser.data.username,
+            email: newUser.data.email,
+        }
+
+        setUsers([...users, objUser]);
     }
 
     return (

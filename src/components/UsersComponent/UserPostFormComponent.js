@@ -9,14 +9,12 @@ const UserPostFormComponent = ({addUser}) => {
 
     const formUser = (data) => {
         postUsers(data)
-            .then(({response}) => addUser(data));
+            .then(response => addUser(response.data));
     }
 
-
     return (
-        <div>
+        <div className='userForm'>
             <form onSubmit={handleSubmit(formUser)}>
-                <input type="text" placeholder={'id'} {...register('id')}/>
                 <input type="text" placeholder={'name'} {...register('name')}/>
                 <input type="text" placeholder={'username'} {...register('username')}/>
                 <input type="text" placeholder={'email'} {...register('email')}/>

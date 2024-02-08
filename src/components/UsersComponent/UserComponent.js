@@ -4,10 +4,10 @@ const UserComponent = ({user}) => {
     return (
         <div>
             <ul>
-                <li>{user.id}</li>
-                <li>{user.name}</li>
-                <li>{user.username}</li>
-                <li>{user.email}</li>
+                <li>id: {user.id}</li>
+                <li>name: {user.name}</li>
+                <li>username: {user.username}</li>
+                <li>email: {user.email}</li>
             </ul>
         </div>
     );

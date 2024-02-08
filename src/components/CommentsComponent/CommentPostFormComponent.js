@@ -6,18 +6,17 @@ const CommentPostFormComponent = ({addComment}) => {
 
     const {register, handleSubmit} = useForm();
 
-    const formComment = (data) => {
-        console.log({data});
-
-        postComments(data)
-            .then(({response}) => addComment(data))
+    const formComment = (dataF) => {
+        postComments(dataF)
+            .then(response => {
+                addComment(response.data)
+            })
     }
 
     return (
-        <div>
+        <div className='commentForm'>
             <form onSubmit={handleSubmit(formComment)}>
                 <input type="text" placeholder={'postId'} {...register('postId')}/>
-                <input type="text" placeholder={'id'} {...register('id')}/>
                 <input type="text" placeholder={'name'} {...register('name')}/>
                 <input type="text" placeholder={'email'} {...register('email')}/>
                 <input type="text" placeholder={'body'} {...register('body')}/>
