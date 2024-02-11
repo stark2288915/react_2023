@@ -10,7 +10,7 @@ import {PostsPage} from "./pages/posts-pages/PostsPage";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const routes = createBrowserRouter([
-    {path: '/', element: <},
+    {path: '/', element: },
     {}
 ])
 
