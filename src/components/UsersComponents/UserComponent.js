@@ -4,16 +4,17 @@ import {useNavigate} from "react-router-dom";
 const UserComponent = ({user}) => {
     const {id, name} = user;
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     return (
         <div>
-            <div>{id}. {name}</div>
+             <li>{id}. {name}</li>
             <button onClick={()=>{
-                navigate(`user/${id}`, {state: user})
-            }
-            }>user-details</button>
+
+                navigate(`users/${user.id}`, {state: user})
+
+            }}>user details</button>
         </div>
     );
 };
 
-export {UserComponent};
+export default UserComponent;

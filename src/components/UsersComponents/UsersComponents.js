@@ -1,5 +1,5 @@
 import React from 'react';
-import {UserComponent} from "./UserComponent";
+import UserComponent from "./UserComponent";
 
 const UsersComponents = ({users}) => {
     return (
@@ -9,4 +9,4 @@ const UsersComponents = ({users}) => {
     );
 };
 
-export {UsersComponents};
+export default UsersComponents;
