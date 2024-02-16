@@ -14,6 +14,7 @@ const UserDetailsComponent = ({user}) => {
             </ul>
             <button onClick={()=> {
                 navigate('userposts', {state: user.id})
+
             }
             }>post of current user</button>
         </div>

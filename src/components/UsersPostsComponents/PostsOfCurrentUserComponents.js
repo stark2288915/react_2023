@@ -11,9 +11,9 @@ const PostsOfCurrentUserComponents = () => {
 
     useEffect(()=> {
         getUserPosts(userId).then(value => setPosts(value))
-    }, [userId])
+    }, [])
 
-
+    console.log(userId)
 
     return (
         <div>
